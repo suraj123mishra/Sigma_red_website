@@ -1,0 +1,63 @@
+.graph_card_layout {
+  background-color: #eeeeee !important;
+  margin-top: -35px !important;
+  padding-right: 25px !important;
+}
+
+.header_from_text {
+  background-color: #eeeeee !important;
+}
+
+.card_layout_second {
+  margin-top: -10px !important;
+  max-height: 120px !important;
+}
+
+.card_text_layout {
+  font-size: 15px !important;
+}
+
+.card_class_con {
+  margin-top: 0 !important;
+}
+
+.card_class {
+  max-width: 720px;
+  margin-left: 40px;
+  background-color: "#eeeeee" !important;
+  border: 4px solid #222;
+  border-radius: 5px !important;
+}
+
+.card_text_class {
+  background-color: "#eeeeee" !important;
+}
+
+@media screen and (max-width: 600px) {
+  .card_class {
+    max-width: 720px;
+    margin-left: 24px;
+    background-color: "#eeeeee" !important;
+  }
+  .card_text_class {
+    font-size: 10px !important;
+    background-color: "#eeeeee" !important;
+  }
+  .card_layout_second {
+    margin-top: -25px !important;
+    max-height: 250px !important;
+  }
+  .header_from_text {
+    background-color: #eeeeee !important;
+    font-size: 5px !important;
+  }
+  .graph_card_layout {
+    background-color: #eeeeee !important;
+    margin-top: -25px !important;
+    min-height: 100px !important;
+  }
+}
+
+.background_animation {
+  margin-top: -21px !important;
+}

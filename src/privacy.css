@@ -1,0 +1,19 @@
+.card_class_privacy {
+  background-color: #eeeeee !important;
+  margin-top: 110px;
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-right: 10px;
+  border: 5px solid #222;
+}
+
+@media screen and (max-width: 600px) {
+  .h4 {
+    font-size: 1px !important;
+  }
+}
+
+#text_color_sigma_sec {
+  color: red !important;
+  font-weight: 700 !important;
+}
