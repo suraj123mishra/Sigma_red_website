@@ -1,10 +1,25 @@
 import React from 'react';
 import "./Login.css";
-
+import emailjs from 'emailjs-com';
 
 
 
 export default function Login() {
+
+	function sendEmail(e) {
+		e.preventDefault();
+	
+		emailjs.sendForm('service_bgm7dji', 'template_lzxo1u1', e.target, 'user_ge1igHpxmNzJz99nXnHUT')
+		
+		  .then((result) => {
+			  console.log(result.text);
+		  }, (error) => {
+			  console.log(error.text);
+		  });
+		  e.target.reset()
+	  }
+
+
 
     return (
        
@@ -17,30 +32,30 @@ export default function Login() {
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-md-8 col-15 offset-lg-2 offset-md-4 offset-1">
-					<form action="mailto:contact@sigmared.ai" method="POST"  name="EmailForm">
+					<form  onSubmit={sendEmail}  >
 
   						<div class="form-group">
-    					<input name="name" type="text" class="form-control font_size_form" id="name"  autocomplete="off"
+    					<input name="name" type="text" class="form-control font_size_form"   autocomplete="off"
     					placeholder="Name"/>
   						</div>
   							
   						<div class="form-group">
-    					<input name="email" type="email" class="form-control font_size_form" id="email" required autocomplete="off"
+    					<input name="email" type="email" class="form-control font_size_form" required autocomplete="off"
     					placeholder="Email"/>
   						</div>
 
   						<div class="form-group">
-						  <input name="phone" type="text" class="form-control font_size_form" id="email" autocomplete="off"
+						  <input name="phone" type="text" class="form-control font_size_form"  autocomplete="off"
     					placeholder="Phone"/>
   						</div>
 
   						<div class="form-group">
-  						<textarea name="message" class="form-control font_size_form" rows="5" id="comment" placeholder="Your Message"></textarea>
+  						<textarea name="message" class="form-control font_size_form" rows="5"  placeholder="Your Message"></textarea>
 						</div>
 
 
 						<div class="d-flex justify-content-center ">
-  						<button type="submit"  class="btn btn-primary btn-lg" value='Submit'>Submit</button>
+  						<input type="submit" value="Submit"  class="btn btn-primary btn-lg" ></input>
   					    </div>
 						
 						</form>
